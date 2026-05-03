@@ -1,0 +1,34 @@
+name: Update Tracker
+
+on:
+  workflow_dispatch:
+    inputs:
+      problem:
+        description: 'Problem name (kebab-case)'
+        required: true
+      difficulty:
+        description: 'Difficulty (Easy/Medium/Hard)'
+        required: true
+      pattern:
+        description: 'Pattern (e.g., Hash Map)'
+        required: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Append to tracker.csv
+        run: |
+          echo "${{ github.event.inputs.problem }},${{ github.event.inputs.difficulty }},${{ github.event.inputs.pattern }},Done,$(date +%F),$(date +%F)" >> tracker.csv
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add tracker.csv
+          git commit -m "update tracker for ${{ github.event.inputs.problem }}" || echo "No changes"
+          git push

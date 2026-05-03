@@ -40,3 +40,5 @@ For each element, check if its complement (`target - num`) already exists.
 
 * Classic hashmap lookup problem
 * Always check complement BEFORE inserting current element
+
+[![Update Tracker](https://img.shields.io/badge/Update-Tracker-blue)](https://github.com/<your-username>/code-dojo/actions/workflows/update-tracker.yml)
