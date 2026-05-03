@@ -23,6 +23,13 @@ A structured repository for mastering Data Structures & Algorithms through consi
 
 > Focus on patterns, not platforms.
 
+## 📚 Problem Index
+
+| # | Problem                       | Link                                               | Difficulty | Pattern  | Python | JS |
+| - | ----------------------------- | -------------------------------------------------- | ---------- | -------- | ------ | -- |
+| 1 | [Two Sum](./problems/two-sum) | 🔗 [Solve](https://leetcode.com/problems/two-sum/) | Easy       | Hash Map | ✅      | ✅  |
+
+
 ---
 
 This will evolve as I progress.
