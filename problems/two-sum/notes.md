@@ -12,7 +12,7 @@ Given an array of integers `nums` and an integer `target`, return indices of the
 
 ## 🧠 Pattern
 
-* Hash Map
+- [Hash Map](../../templates/hash-map.md)
 
 ---
 
